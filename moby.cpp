@@ -20,12 +20,12 @@ int main ( int argc, char *argv[] ){
     Ravelin::SVelocityd velocity(0.1,0,0,0,0,0);
     Ravelin::SMomentumd momentum(1,1,1,1,1,1);
     Ravelin::Origin3d trans(0,0,0.5);
-    Ravelin::Matrix3d I(1,0.1,0.1,0.1,1,0,0.1,0,0.5);
+    Ravelin::Matrix3d I(1,0,0,0,1,0,0,0,1);
     Ravelin::VectorNd ga(6);
     //ga.resize(6);
 
     // set inertial parameters
-    Quatd quat(0,0,0,1);
+    Quatd quat(1,0,0,0);
     Vector3d origin(0,0,0);
     boost::shared_ptr<Pose3d> pose(new Pose3d());
     pose->x = origin;
